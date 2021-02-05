@@ -4,4 +4,8 @@ export default class User {
     this.age = age;
     this.lifeExpectancy = 72.8;
   }
+
+  updateLifeExpectancy() {
+
+  }
 }
