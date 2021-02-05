@@ -195,4 +195,8 @@ export default class Calculations {
     this.zimbabwe = 61.5;
     this.otherWorldAverage = 72.8;
   }
+
+  mercuryAge(user) {
+
+  }
 }
