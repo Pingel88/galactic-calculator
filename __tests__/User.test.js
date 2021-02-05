@@ -25,7 +25,27 @@ describe("User", () => {
   test("should update the User.lifeExpectancy value based on the country given", () => {
     currentUser.updateLifeExpectancy(calc.turkey);
     expect(currentUser.lifeExpectancy).toEqual(77.7);
-  })
+  });
+
+  test("should update the User.lifeExpectancy value based on the country given", () => {
+    currentUser.updateLifeExpectancy(calc.greece);
+    expect(currentUser.lifeExpectancy).toEqual(82.2);
+  });
+
+  test("should update the User.lifeExpectancy value based on the country given", () => {
+    currentUser.updateLifeExpectancy(calc.japan);
+    expect(currentUser.lifeExpectancy).toEqual(84.6);
+  });
+
+  test("should update the User.lifeExpectancy value based on the country given", () => {
+    currentUser.updateLifeExpectancy(calc.unitedStates);
+    expect(currentUser.lifeExpectancy).toEqual(78.9);
+  });
+
+  test("should update the User.lifeExpectancy value based on the country given", () => {
+    currentUser.updateLifeExpectancy(calc.nigeria);
+    expect(currentUser.lifeExpectancy).toEqual(54.7);
+  });
 
   // test("should return user's remaining life expectancy in the given planet's years based on the user's country", () => {
   //   expect(currentUser.yearsLeft())
