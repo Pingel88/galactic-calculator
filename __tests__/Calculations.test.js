@@ -11,20 +11,20 @@ describe("Calculations", () => {
   });
 
   test("should return a float of the difference between Mercury's and Earth's orbit in the form of a ratio", () => {
-    expect(calc.mercuryYear).toEqual(0.24);
+    expect(calc.mercury).toEqual(0.24);
   });
 
   test("should return a float of the difference between Venus' and Earth's orbit in the form of a ratio", () => {
-    expect(calc.venusYear).toEqual(0.62);
-  })
+    expect(calc.venus).toEqual(0.62);
+  });
 
   test("should return a float of the difference between Mars' and Earth's orbit in the form of a ratio", () => {
-    expect(calc.marsYear).toEqual(1.88);
-  })
+    expect(calc.mars).toEqual(1.88);
+  });
 
   test("should return a float of the difference between Jupiter's and Earth's orbit in the form of a ratio", () => {
-    expect(calc.jupiterYear).toEqual(11.86);
-  })
+    expect(calc.jupiter).toEqual(11.86);
+  });
   
     test("should return a float or integer of the life expectancy of the country in years", () => {
       expect(calc.afghanistan).toEqual(64.8);
@@ -217,22 +217,26 @@ describe("Calculations", () => {
       expect(calc.zambia).toEqual(63.9);
       expect(calc.zimbabwe).toEqual(61.5);
       expect(calc.otherWorldAverage).toEqual(72.8);
-  })
+  });
 
   test("should return the user's age as a number in Mercury years", () => {
-    expect(calc.planetAge(currentUser, calc.mercuryYear)).toEqual(133.333);
-  })
+    expect(calc.planetAge(currentUser.age, calc.mercury)).toEqual(133.333);
+  });
 
   test("should return the user's age as a number in Venus years", () => {
-    expect(calc.planetAge(currentUser, calc.venusYear)).toEqual(51.613);
-  })
+    expect(calc.planetAge(currentUser.age, calc.venus)).toEqual(51.613);
+  });
 
   test("should return the user's age as a number in Mars years", () => {
-    expect(calc.planetAge(currentUser, calc.marsYear)).toEqual(17.021);
-  })
+    expect(calc.planetAge(currentUser.age, calc.mars)).toEqual(17.021);
+  });
 
   test("should return the user's age as a number in Jupiter years", () => {
-    expect(calc.planetAge(currentUser, calc.jupiterYear)).toEqual(2.698);
-  })
+    expect(calc.planetAge(currentUser.age, calc.jupiter)).toEqual(2.698);
+  });
+
+    test("should return user's remaining life expectancy in the given planet's years", () => {
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mercury)).toEqual(170);
+  });
 
 }); 

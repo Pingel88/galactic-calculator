@@ -47,7 +47,4 @@ describe("User", () => {
     expect(currentUser.lifeExpectancy).toEqual(54.7);
   });
 
-  // test("should return user's remaining life expectancy in the given planet's years based on the user's country", () => {
-  //   expect(currentUser.yearsLeft())
-  // })
 }); 
