@@ -20,10 +20,10 @@ describe("Calculations", () => {
   })
 
   test("should return a float of the difference between Jupiter's and Earth's orbit in the form of a ratio", () => {
-    expect(calcs.jupiter).toEqual(11.80000060000);
+    expect(calcs.jupiter).toEqual(11.86);
   })
   
-    test("should return a float or integer of the life expectency of the country in years", () => {
+    test("should return a float or integer of the life expectancy of the country in years", () => {
       expect(calcs.afghanistan).toEqual(64.8);
       expect(calcs.albania).toEqual(78.6);
       expect(calcs.algeria).toEqual(76.9);
