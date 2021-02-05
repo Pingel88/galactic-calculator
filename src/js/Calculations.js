@@ -1,9 +1,9 @@
 export default class Calculations {
   constructor() {
-    this.mercuryYear = 0.24;
-    this.venusYear = 0.62;
-    this.marsYear = 1.88;
-    this.jupiterYear = 11.86;
+    this.mercury = 0.24;
+    this.venus = 0.62;
+    this.mars = 1.88;
+    this.jupiter = 11.86;
     this.afghanistan = 64.8;
     this.albania = 78.6;
     this.algeria = 76.9;
@@ -194,10 +194,14 @@ export default class Calculations {
     this.zambia = 63.9;
     this.zimbabwe = 61.5;
     this.otherWorldAverage = 72.8;
-  }
+  };
   
-  planetAge(user, planetYear) {
-    const planetYears = user.age / planetYear;
+  planetAge(age, planetYear) {
+    const planetYears = age / planetYear;
     return parseFloat(planetYears.toFixed(3));
-  }
-}
+  };
+
+  yearsLeft() {
+
+  };
+};

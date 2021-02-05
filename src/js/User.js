@@ -3,9 +3,9 @@ export default class User {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = 72.8;
-  }
+  };
 
   updateLifeExpectancy(country) {
     this.lifeExpectancy = country;
-  }
-}
+  };
+};
