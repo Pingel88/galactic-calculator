@@ -196,7 +196,8 @@ export default class Calculations {
     this.otherWorldAverage = 72.8;
   }
   
-  planetAge() {
-
+  planetAge(user, planetYear) {
+    const planetYears = user.age / planetYear;
+    return parseFloat(planetYears.toFixed(3));
   }
 }

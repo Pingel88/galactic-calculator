@@ -222,4 +222,17 @@ describe("Calculations", () => {
   test("should return the user's age as a number in Mercury years", () => {
     expect(calcs.planetAge(currentUser, calcs.mercuryYear)).toEqual(133.333);
   })
+
+  test("should return the user's age as a number in Venus years", () => {
+    expect(calcs.planetAge(currentUser, calcs.venusYear)).toEqual(51.613);
+  })
+
+  test("should return the user's age as a number in Mars years", () => {
+    expect(calcs.planetAge(currentUser, calcs.marsYear)).toEqual(17.021);
+  })
+
+  test("should return the user's age as a number in Jupiter years", () => {
+    expect(calcs.planetAge(currentUser, calcs.jupiterYear)).toEqual(2.698);
+  })
+  
 }); 
