@@ -1,6 +1,6 @@
 export default class Calculations {
   constructor() {
-
+    this.mercury = 0.24;
   }
 }
 
