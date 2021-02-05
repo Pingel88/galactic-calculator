@@ -201,7 +201,9 @@ export default class Calculations {
     return parseFloat(planetYears.toFixed(3));
   };
 
-  yearsLeft() {
-
+  yearsLeft(age, lifeExpectancy, planetYear) {
+    const earthYearsLeft = lifeExpectancy - age;
+    const planetYearsLeft = earthYearsLeft / planetYear;
+    return parseFloat(planetYearsLeft.toFixed(3));
   };
 };
