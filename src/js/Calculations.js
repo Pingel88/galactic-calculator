@@ -200,4 +200,7 @@ export default class Calculations {
     return user.age * this.mercuryYear;
   }
 
+  venusAge(user) {
+
+  }
 }
