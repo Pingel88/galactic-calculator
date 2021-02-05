@@ -15,4 +15,4 @@ describe("User", () => {
   test("should assign the 'age' key to a given number", () => {
     expect(currentUser.age).toEqual(32);
   });
-});
+}); 
