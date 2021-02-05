@@ -265,3 +265,6 @@ export default class Calculations {
 // Yemen	66.1
 // Zambia	63.9
 // Zimbabwe	61.5
+
+
+
