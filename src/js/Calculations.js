@@ -197,6 +197,6 @@ export default class Calculations {
   }
 
   mercuryAge(user) {
-
+    return user.age * this.mercury;
   }
 }
