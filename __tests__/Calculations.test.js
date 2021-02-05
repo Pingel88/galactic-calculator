@@ -1,10 +1,13 @@
 import Calculations from "./../src/js/Calculations.js";
+import User from "./../src/js/User.js";
 
 describe("Calculations", () => {
   let calcs;
+  let currentUser;
 
   beforeEach(() => {
     calcs = new Calculations();
+    currentUser = new User("Mike", 32);
   });
 
   test("should return a float of the difference between Mercury's and Earth's orbit in the form of a ratio", () => {
@@ -216,4 +219,7 @@ describe("Calculations", () => {
       expect(calcs.otherWorldAverage).toEqual(72.8);
   })
 
+  test("should return the user's age as a number in Mercury years", () => {
+    expect(calcs.mercuryAge(currentUser)).toEqual(7.68);
+  })
 }); 
