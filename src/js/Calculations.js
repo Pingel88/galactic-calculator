@@ -201,6 +201,6 @@ export default class Calculations {
   }
 
   venusAge(user) {
-
+    return user.age * this.venusYear;
   }
 }
