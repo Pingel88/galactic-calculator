@@ -239,4 +239,19 @@ describe("Calculations", () => {
     expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mercury)).toEqual(170);
   });
 
+  test("should return user's remaining life expectancy in the given planet's years", () => {
+    currentUser.updateLifeExpectancy(calc.nepal);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.venus)).toEqual(62.581);
+  });
+
+  test("should return user's remaining life expectancy in the given planet's years", () => {
+    currentUser.updateLifeExpectancy(calc.chad);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mars)).toEqual(11.809);
+  });
+
+  test("should return user's remaining life expectancy in the given planet's years", () => {
+    currentUser.updateLifeExpectancy(calc.belgium);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.jupiter)).toEqual(4.182);
+  });
+
 }); 
