@@ -1,4 +1,3 @@
-import { TestScheduler } from "jest";
 import User from "./../src/js/User.js";
 
 describe("User", () => {
