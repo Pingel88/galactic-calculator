@@ -1,3 +1,10 @@
+export default class Calculations {
+  constructor() {
+
+  }
+}
+
+
 // user class
 // age - user entered
 
