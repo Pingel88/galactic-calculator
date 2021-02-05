@@ -220,6 +220,6 @@ describe("Calculations", () => {
   })
 
   test("should return the user's age as a number in Mercury years", () => {
-    expect(calcs.planetAge(currentUser, calcs.mercuryYear)).toEqual(7.68);
+    expect(calcs.planetAge(currentUser, calcs.mercuryYear)).toEqual(133.333);
   })
 }); 
