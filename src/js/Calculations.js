@@ -196,11 +196,4 @@ export default class Calculations {
     this.otherWorldAverage = 72.8;
   }
 
-  mercuryAge(user) {
-    return user.age * this.mercuryYear;
-  }
-
-  venusAge(user) {
-    return user.age * this.venusYear;
-  }
 }
