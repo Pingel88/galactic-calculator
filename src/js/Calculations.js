@@ -2,6 +2,7 @@ export default class Calculations {
   constructor() {
     this.mercury = 0.24;
     this.venus = 0.62;
+    this.mars = 1.88;
   }
 }
 
