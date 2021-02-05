@@ -18,4 +18,8 @@ describe("Calculations", () => {
   test("should return a float of the difference between Mars' and Earth's orbit in the form of a ratio", () => {
     expect(calcs.mars).toEqual(1.88);
   })
+
+  test("should return a float of the difference between Jupiter's and Earth's orbit in the form of a ratio", () => {
+    expect(calcs.jupiter).toEqual(11.86);
+  })
 }); 
