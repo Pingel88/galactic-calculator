@@ -11,19 +11,19 @@ describe("Calculations", () => {
   });
 
   test("should return a float of the difference between Mercury's and Earth's orbit in the form of a ratio", () => {
-    expect(calcs.mercury).toEqual(0.24);
+    expect(calcs.mercuryYear).toEqual(0.24);
   });
 
   test("should return a float of the difference between Venus' and Earth's orbit in the form of a ratio", () => {
-    expect(calcs.venus).toEqual(0.62);
+    expect(calcs.venusYear).toEqual(0.62);
   })
 
   test("should return a float of the difference between Mars' and Earth's orbit in the form of a ratio", () => {
-    expect(calcs.mars).toEqual(1.88);
+    expect(calcs.marsYear).toEqual(1.88);
   })
 
   test("should return a float of the difference between Jupiter's and Earth's orbit in the form of a ratio", () => {
-    expect(calcs.jupiter).toEqual(11.86);
+    expect(calcs.jupiterYear).toEqual(11.86);
   })
   
     test("should return a float or integer of the life expectancy of the country in years", () => {
@@ -221,5 +221,9 @@ describe("Calculations", () => {
 
   test("should return the user's age as a number in Mercury years", () => {
     expect(calcs.mercuryAge(currentUser)).toEqual(7.68);
+  })
+
+  test("should return the user's age as a number in Venus years", () => {
+    expect(calcs.venusAge(currentUser)).toEqual(19.84);
   })
 }); 
