@@ -1,5 +1,5 @@
-import User from "./../src/js/User.js";
-import Calculations from "./../src/js/Calculations.js";
+import User from "./../src/js/user.js";
+import Calculations from "./../src/js/calculations.js";
 
 describe("User", () => {
   let currentUser;
