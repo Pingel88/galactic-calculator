@@ -194,12 +194,12 @@ export default class Calculations {
     this.zambia = 63.9;
     this.zimbabwe = 61.5;
     this.otherWorldAverage = 72.8;
-  };
+  }
   
-  planetAge(age, planetYear) {
+  planetConverter(age, planetYear) {
     const planetYears = age / planetYear;
     return parseFloat(planetYears.toFixed(3));
-  };
+  }
 
   yearsLeft(age, lifeExpectancy, planetYear) {
     const earthYearsLeft = lifeExpectancy - age;
@@ -209,9 +209,9 @@ export default class Calculations {
       return `You have ${yearsLeftRounded} of this planet's years left to live.`;
     } else if (yearsLeftRounded < 0) {
       const yearsLeftPositive = yearsLeftRounded * -1;
-      return `You have lived ${yearsLeftPositive} of this planet's years beyond your life expectancy.`
+      return `You have lived ${yearsLeftPositive} of this planet's years beyond your life expectancy.`;
     } else if (yearsLeftRounded === 0) {
       return "Watch your back.";
     }
-  };
-};
+  }
+}

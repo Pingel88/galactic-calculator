@@ -224,19 +224,19 @@ describe("Calculations", () => {
   });
 
   test("should return the user's age as a number in Mercury years", () => {
-    expect(calc.planetAge(currentUser.age, calc.mercury)).toEqual(133.333);
+    expect(calc.planetConverter(currentUser.age, calc.mercury)).toEqual(133.333);
   });
 
   test("should return the user's age as a number in Venus years", () => {
-    expect(calc.planetAge(currentUser.age, calc.venus)).toEqual(51.613);
+    expect(calc.planetConverter(currentUser.age, calc.venus)).toEqual(51.613);
   });
 
   test("should return the user's age as a number in Mars years", () => {
-    expect(calc.planetAge(currentUser.age, calc.mars)).toEqual(17.021);
+    expect(calc.planetConverter(currentUser.age, calc.mars)).toEqual(17.021);
   });
 
   test("should return the user's age as a number in Jupiter years", () => {
-    expect(calc.planetAge(currentUser.age, calc.jupiter)).toEqual(2.698);
+    expect(calc.planetConverter(currentUser.age, calc.jupiter)).toEqual(2.698);
   });
 
     test("should return a string stating the user's remaining life expectancy in the given planet's years", () => {
