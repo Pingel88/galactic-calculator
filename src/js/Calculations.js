@@ -204,6 +204,7 @@ export default class Calculations {
   yearsLeft(age, lifeExpectancy, planetYear) {
     const earthYearsLeft = lifeExpectancy - age;
     const planetYearsLeft = earthYearsLeft / planetYear;
-    return parseFloat(planetYearsLeft.toFixed(3));
+    const yearsLeftRounded = parseFloat(planetYearsLeft.toFixed(3));
+    return `You have ${yearsLeftRounded} of this planet's years left to live.`;
   };
 };

@@ -236,22 +236,22 @@ describe("Calculations", () => {
   });
 
     test("should return user's remaining life expectancy in the given planet's years", () => {
-    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mercury)).toEqual(170);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mercury)).toEqual("You have 170 of this planet's years left to live.");
   });
 
   test("should return user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.nepal);
-    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.venus)).toEqual(62.581);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.venus)).toEqual("You have 62.581 of this planet's years left to live.");
   });
 
   test("should return user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.chad);
-    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mars)).toEqual(11.809);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mars)).toEqual("You have 11.809 of this planet's years left to live.");
   });
 
   test("should return user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.belgium);
-    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.jupiter)).toEqual(4.182);
+    expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.jupiter)).toEqual("You have 4.182 of this planet's years left to live.");
   });
 
 }); 
