@@ -5,11 +5,13 @@ describe("Calculations", () => {
   let calc;
   let currentUser;
   let oldUser;
+  let otherUser;
 
   beforeEach(() => {
     calc = new Calculations();
     currentUser = new User("Mike", 32);
     oldUser = new User("Old Fart", 91);
+    otherUser = new User("Lucky", 83);
   });
 
   test("should return a float of the difference between Mercury's and Earth's orbit in the form of a ratio", () => {
@@ -259,6 +261,25 @@ describe("Calculations", () => {
   test("should return a string stating how long the user has lived beyond their life expectancy in the given planet's years", () => {
     oldUser.updateLifeExpectancy(calc.chile);
     expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.jupiter)).toEqual("You have lived 0.911 of this planet's years beyond your life expectancy.");
+  });
+
+  test("should return a string stating how long the user has lived beyond their life expectancy in the given planet's years", () => {
+    expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.mars)).toEqual("You have lived 9.681 of this planet's years beyond your life expectancy.");
+  });
+
+  test("should return a string stating how long the user has lived beyond their life expectancy in the given planet's years", () => {
+    oldUser.updateLifeExpectancy(calc.nicaragua);
+    expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.venus)).toEqual("You have lived 26.613 of this planet's years beyond your life expectancy.");
+  });
+
+  test("should return a string stating how long the user has lived beyond their life expectancy in the given planet's years", () => {
+    oldUser.updateLifeExpectancy(calc.northMacedonia);
+    expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.mercury)).toEqual("You have lived 63.333 of this planet's years beyond your life expectancy.");
+  });
+
+  test("should return a string stating 'watch your back' if the user's age matches the user's life expectancy", () => {
+    otherUser.updateLifeExpectancy(calc.iceland);
+    expect(calc.yearsLeft(otherUser.age, otherUser.lifeExpectancy, calc.mars)).toEqual("Watch your back.");
   });
 
 }); 
