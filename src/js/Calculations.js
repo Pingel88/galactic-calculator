@@ -210,6 +210,8 @@ export default class Calculations {
     } else if (yearsLeftRounded < 0) {
       const yearsLeftPositive = yearsLeftRounded * -1;
       return `You have lived ${yearsLeftPositive} of this planet's years beyond your life expectancy.`
+    } else if (yearsLeftRounded === 0) {
+      return "Watch your back.";
     }
   };
 };

@@ -277,7 +277,7 @@ describe("Calculations", () => {
     expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.mercury)).toEqual("You have lived 63.333 of this planet's years beyond your life expectancy.");
   });
 
-  test("should return a string stating 'watch your back' if the user's age matches the user's life expectancy", () => {
+  test("should return a string stating 'Watch your back.' if the user's age matches the user's life expectancy", () => {
     otherUser.updateLifeExpectancy(calc.iceland);
     expect(calc.yearsLeft(otherUser.age, otherUser.lifeExpectancy, calc.mars)).toEqual("Watch your back.");
   });
