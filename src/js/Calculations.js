@@ -205,6 +205,11 @@ export default class Calculations {
     const earthYearsLeft = lifeExpectancy - age;
     const planetYearsLeft = earthYearsLeft / planetYear;
     const yearsLeftRounded = parseFloat(planetYearsLeft.toFixed(3));
-    return `You have ${yearsLeftRounded} of this planet's years left to live.`;
+    if (yearsLeftRounded > 0) {
+      return `You have ${yearsLeftRounded} of this planet's years left to live.`;
+    } else if (yearsLeftRounded < 0) {
+      const yearsLeftPositive = yearsLeftRounded * -1;
+      return `You have lived ${yearsLeftPositive} of this planet's years beyond your life expectancy.`
+    }
   };
 };
