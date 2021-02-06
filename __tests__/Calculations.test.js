@@ -4,10 +4,12 @@ import User from "./../src/js/User.js";
 describe("Calculations", () => {
   let calc;
   let currentUser;
+  let oldUser;
 
   beforeEach(() => {
     calc = new Calculations();
     currentUser = new User("Mike", 32);
+    oldUser = new User("Old Fart", 91);
   });
 
   test("should return a float of the difference between Mercury's and Earth's orbit in the form of a ratio", () => {
@@ -235,23 +237,28 @@ describe("Calculations", () => {
     expect(calc.planetAge(currentUser.age, calc.jupiter)).toEqual(2.698);
   });
 
-    test("should return user's remaining life expectancy in the given planet's years", () => {
+    test("should return a string stating the user's remaining life expectancy in the given planet's years", () => {
     expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mercury)).toEqual("You have 170 of this planet's years left to live.");
   });
 
-  test("should return user's remaining life expectancy in the given planet's years", () => {
+  test("should return a string stating the user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.nepal);
     expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.venus)).toEqual("You have 62.581 of this planet's years left to live.");
   });
 
-  test("should return user's remaining life expectancy in the given planet's years", () => {
+  test("should return a string stating the user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.chad);
     expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.mars)).toEqual("You have 11.809 of this planet's years left to live.");
   });
 
-  test("should return user's remaining life expectancy in the given planet's years", () => {
+  test("should return a string stating the user's remaining life expectancy in the given planet's years", () => {
     currentUser.updateLifeExpectancy(calc.belgium);
     expect(calc.yearsLeft(currentUser.age, currentUser.lifeExpectancy, calc.jupiter)).toEqual("You have 4.182 of this planet's years left to live.");
+  });
+
+  test("should return a string stating how long the user has lived beyond their life expectancy in the given planet's years", () => {
+    oldUser.updateLifeExpectancy(calc.chile);
+    expect(calc.yearsLeft(oldUser.age, oldUser.lifeExpectancy, calc.jupiter)).toEqual("You have lived 0.911 of this planet's years beyond your life expectancy.");
   });
 
 }); 
