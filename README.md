@@ -23,7 +23,8 @@ To view this webpage and the project contents offline:
 * Type `git clone`, then paste the URL from your clipboard and press enter
 * To view the webpage:
   * Change the current working directory to the cloned directory
-  * Type `npm run start` and press enter
+  * Type `npm install` and press enter
+  * After installation is complete, type `npm run start` and press enter
   * Your default browser will open with the webpage viewable
 ## Contact Information
 #### Mike Pingel
